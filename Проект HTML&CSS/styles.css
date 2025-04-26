@@ -1,0 +1,1240 @@
+/*Весь текст*/ @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+/*Синие цифры*/ @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+/*Поля калькулятора*/ @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* /* Общие стили */ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Файл index.html */
+.black-strip {
+    width: 100%;
+    height: 40px;
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.blocks-center {
+    margin: 0 210px;
+    width: 1500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-city {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 20px;
+    bottom: 10px;
+}
+
+.menu-city button, .menu-check button {
+    font-family: Montserrat;
+    font-size: 16px;
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;    
+}
+
+#gps {
+    margin-right: 5px;
+}
+
+#gps ,#arrow_down {
+    width: 20px;
+    height: 20px;
+}
+
+#city, #address {
+    margin-right: 10px;
+}
+
+#address {
+    color: #6293fc;
+}
+
+#address:hover {
+    color: #7DA6FF;
+}
+
+#city:hover, #work:hover, .btn-check:hover, .footer-menu-block a:hover {
+    color: #bbbbbb;
+}
+
+.logo {
+    padding-top: 20px;
+}
+
+.logo img {
+    cursor: pointer;
+}
+
+.site-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.site-menu ul {
+    display: flex;
+    text-decoration: none;
+    gap: 25px;
+}
+
+.site-menu li  {
+    list-style: none;
+    display: inline-flex;
+    position: relative;
+}
+
+.site-menu a {
+    color: #1e4eb2;
+    text-decoration: none;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.site-menu ul li::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #1e4eb2 ;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.site-menu ul li:hover::after {
+    width: 100%;
+}
+
+.main-block {
+    margin: 20px 210px 50px 210px;
+    width: 1500px;
+    display: block;    
+    text-align: center;
+}
+
+.slider /* ЗАМЕНИТЬ НА ReactJS СЛАЙДЕР */{
+    margin-bottom: 30px;
+}
+
+.about-head, .uslugi, #our-privileges, #repair-header, #label-calc {
+    font-family: Montserrat; 
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.about-info-header {
+    font-family: Montserrat; 
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.privileges {
+    margin-top: 30px;
+    font-family: Montserrat; 
+}
+
+.privileges p {
+    margin-bottom: 20px;
+}
+
+.privileges-blocks {
+    margin: 0px 10px 10px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.privileges-block {
+    width: 480px;
+    height: 100px;
+    background-color: #dde8ff;
+    color:#000000;
+    border-radius: 10px;
+    box-sizing: border-box; /* Учитываем padding и border в ширине */
+    display: flex;
+    padding: 20px;
+}
+
+.privileges-block img {
+    display: flex;
+    justify-content: space-between;
+    width: 60px;
+    height: 60px;
+}
+
+.privileges-block-text {
+    text-align: left;
+    margin-left: 35px;
+}
+
+.privileges-head {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.privileges-description {
+    font-size: 16px;
+}
+
+.uslugi {
+    margin: 30px 0px;
+}
+
+.difficulty {
+    color: #1e4eb2;
+}
+
+.tiles-uslugi {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 10px;
+}
+
+.tile-usluga {
+    width: 280px;
+    height: 280px;
+    background-color: #a9c4ff;
+    border-radius: 20px;
+}
+
+.tile-usluga p {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: left;
+}
+
+.tile-usluga img {
+    width: 280px;
+    height: 178px;
+    margin-top: 24px;
+}
+
+#repair-header, #label-calc {
+    margin: 20px 0px;
+}
+
+.repair-process-points {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    gap: 80px;
+}
+
+.calc-fields-process {
+    width: 100%;
+    height: 114px;
+    text-align: left;
+    display: flex;
+    gap: 80px;
+}
+
+.big-number-point-digit {
+    width: 55px;
+    height: 109px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-family: Titillium Web;
+    font-size: 96px;
+    font-weight: bold;
+    color: #1e4eb2;
+    margin-right: 10px;
+}
+
+.big-number-point-digit p {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: self-end;
+}
+
+.process p{
+    margin-top: 50px;
+}
+
+.big-number-point {
+    display: flex;
+    justify-content: space-between; 
+    width: 315px;
+    height: 109px;
+}
+
+.big-number-point-rem {
+    display: flex;
+    justify-content: space-between; 
+    width: 315px;
+    height: 114px;
+}
+
+.point-info {
+    font-family: Montserrat;
+}
+
+.point-header p{
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.point-description p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.calc-fields {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+.select-type-your-device, .search-model-your-device, .select-choose-service {
+    height: 44px;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Inter;
+    font-weight: 300;
+    font-size: 16px;
+    font-style: normal;
+}
+
+.select-type-your-device option {
+    font-family: Inter;
+    font-weight: 300;
+    font-size: 16px;
+    font-style: normal;
+}
+
+.select-type-your-device {
+    cursor: pointer;
+    width: 270px;
+}
+
+.search-model-your-device {
+    width: 340px;
+}
+
+.select-choose-service {
+    cursor: pointer;
+    width: 370px;
+}
+
+.btn-calc {
+    padding: 12px 23px;
+    border: 0px;
+    cursor: pointer;
+    background-color: #000000;
+    border-radius: 10px;
+    color: #ffffff;
+    font-family: Montserrat;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-calc:hover {
+    background-color: #404040;
+}
+
+.device-order-available-button:hover {
+    background-color: #133172;
+}
+
+.btn-calc-result /*РЕЗУЛЬТАТ РАССЧЕТА*/ {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-calc-result img{
+    align-items:flex-start;
+    width: 270px;
+}
+
+.device-header {
+    text-align: left;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+    margin: 0px 100px;
+}
+
+.device-header-usluga, .device-header-usluga-filial {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.device-header-usluga-text, .text-under-order-button {
+    font-size: 16px;
+    font-family: Montserrat;
+    font-weight: 400;
+}
+
+.device-header-usluga-filial-adres {
+    font-size: 16px;
+    color: #1e4eb2;
+    margin-bottom: 20px;
+}
+
+.text-under-order-button {
+    margin-top: 10px;
+}
+
+.usluga-price {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: right;
+    padding-bottom: 10px;
+}
+
+.result-info-usluga button {
+    width: 192px;
+    height: 49px;
+    padding: 13px 34px 12px 34px;
+    border: 0px;
+    cursor: pointer;
+    background-color: #1e4eb2;
+    border-radius: 10px;
+    color: #ffffff;
+    font-family: Montserrat;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.inside-button {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.marketing {
+    padding-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.market {
+    width: 720px;
+    height: 455px;
+    background-color: #dde8ff;
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.header-market-left {
+    font-family: Montserrat;
+    font-size: 32px;
+    font-weight: bold;
+    font-style: normal;
+    text-align: left;
+}
+
+.header-market-right {
+    font-family: Montserrat;
+    font-size: 32px;
+    font-weight: bold;
+    font-style: normal;
+    text-align: right;
+}
+
+.market img {
+    width: 202px;
+    height: 239px;
+    margin-right: 70px;
+}
+
+.market-img-text-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.market-text {
+    margin-top: 54px;
+    text-align: right;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.market-text span {
+    font-weight: bold;
+}
+
+.go-market {
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.btn-go-market {
+    width: 327px;
+    height: 59px;
+    padding: 10px;
+    border: 0px;
+    cursor: pointer;
+    background-color: #1e4eb2;
+    border-radius: 10px;
+    color: #ffffff;
+    font-family: Montserrat;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-go-market:hover {
+    background-color: #133172;
+}
+
+.btn-go-market-text-and-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-go-market p {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: 10px;
+}
+
+.btn-go-market img {
+    margin-right: 0px;
+    width: 40px;
+    height: 39px;
+}
+
+.work-and-sales {
+    width: 720px;
+    color: #ffffff;
+    font-family: Montserrat;
+}
+
+.work {
+    height: 280px;
+    background-color: #000000;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    padding: 30px;
+    box-sizing: border-box;
+    text-align: right;
+}
+
+.work-title {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.work-description {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.work-image-and-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.btn-work {
+    width: 164px;
+    height: 64px;
+    background-color: #303030;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-work:hover {
+    background-color: #404040;
+    cursor: pointer;
+}
+
+.work-image img{
+    margin-top: 27px;
+    width: 120px;
+    height: 120px;
+}
+
+.sales {
+    height: 145px;
+    background-color: #1e4eb2;
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.sales img {
+    width: 90px;
+    height: 90px;
+}
+
+.sales-title {
+    margin-left: 30px;
+    margin-right: 85px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.btn-sales {
+    width: 172px;
+    height: 64px;
+    background-color: #133172;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-sales:hover {
+    cursor: pointer;
+    background-color:#163a88;
+}
+
+.footer {
+    width: 100%;
+    height: 360px;
+    background-color: #000000;
+    color:#ffffff;
+    padding: 100px 210px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.footer-logo-block {
+    width: 50%;
+}
+
+.footer img {
+    width: 355px;
+    height: 100px;
+}
+
+.footer-menu-block {
+    padding-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.footer-menu-block a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 400;
+    transition: color 0.3s ease; 
+}
+
+.footer-menu-block ul {
+    display: grid;
+    list-style: none;
+    gap: 10px;
+}
+
+.footer-menu-block-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-menu-block-right-down {
+    margin-top: auto;
+}
+
+/* Адаптивность главной страницы */
+/* Сделать для 1500рх, 1200рх, 768рх, 480рх */
+@media (max-width: 1500px)  {
+    .blocks-center {
+        margin: 0;
+        width: auto;
+    }
+    .main-block {
+        margin: 0;
+        width: auto;
+    }
+}
+
+@media (max-width: 1200px) {
+    .blocks-center {
+        margin: 0;
+        width: auto;
+    }
+    .main-block {
+        margin: 0;
+        width: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .blocks-center {
+        flex-direction: column;
+        align-items: center;
+    }
+    .tiles-uslugi {
+        flex-direction: column;
+    }
+    .repair-process-points, .calc-fields-process {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .tiles-uslugi .tile-usluga {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Файл login-page.html */
+.login-page {
+    background-image: url(images/background.jpg);
+}
+
+.back-to-client {
+    background-color: white;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    padding: 10px;
+    margin: 20px 20px 100px 20px;
+    border: 0px;
+}
+
+.back-to-client:hover {
+    cursor: pointer;
+}
+
+.back-to-client img {
+    width: 30px;
+    height: 30px;
+}
+
+.back-to-client a {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 10px;
+    color: #1e4eb2;
+}
+
+.back-to-client a:hover {
+    padding: 0px;
+    color: #133172;
+}
+
+.info-form h1, .form-auth h1 {
+    font-family: Montserrat;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.forms {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-form {
+    width: 350px;
+    background-color: #ffffff;
+    color: #000000;
+    display: grid;
+    padding: 20px;
+    border-radius: 10px;
+    border: 0px;
+}
+
+.info-form img {
+    width: 207px;
+    height: 70px;
+}
+
+.header-form-text {
+    padding-bottom: 10px;
+}
+
+.header-form-text, .header-form-image, .form-auth-header {
+    justify-content: center;
+    display: flex;
+}
+
+.form-auth {
+    padding: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 700;
+    display: grid;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.form-auth-header {
+    width: 350px;
+    padding-bottom: 10px;
+}
+
+.form-auth-inputs {
+    padding: 0px 27px;
+}
+
+.login-input, .password-input {
+    gap: 5px;
+    display: grid;
+}
+
+.login-input input, .password-input input {
+    border-radius: 5px;
+    height: 30px;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Inter;
+    font-weight: 300;
+    font-size: 16px;
+    font-style: normal;
+    padding: 5px 10px;
+}
+
+.password-input .label-input {
+    margin-top: 10px;
+}
+
+.form-auth p {
+    font-family: Montserrat;
+    font-weight: 700;
+}
+
+.remember-check {
+    display: flex;
+    padding: 10px 0px;
+}
+
+.remember-check p {
+    padding-left: 10px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.btn-login {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-login button {
+    width: 168px;
+    height: 44px;
+    background-color: #1e4eb2;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login button:hover {
+    cursor: pointer;
+    background-color:#133172;
+}
+
+.repair-pass {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.repair-pass p {
+    font-size: 16px;
+}
+
+.repair-pass a {
+    color: #1e4eb2;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.repair-pass a:hover {
+    color: #133172;
+}
+
+/* Файл portal.html */
+
+.sidebar {
+    width: 250px;
+    height: 919px;
+    background-color: #1b1b1b;
+    color: #ffffff;
+}
+
+.portal-logo {
+    padding: 20px;
+}
+
+.portal-logo img {
+    width: 207px;
+    height: 70px;
+}
+
+.sidebar-menu {
+    padding: 30px 20px;
+}
+
+.sidebar-menu img, .sidebar-menu-admin img{
+    width: 30px;
+    height: 30px;
+    padding-right: 10px;
+}
+
+.sidebar-menu-item {
+    background-color: #3c3c3c;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-menu-item:hover, .sidebar-profile:hover {
+    background-color: #5c5c5c;
+    cursor: pointer;
+}
+
+.sidebar-menu-item:last-child /* Убираем отступ у последнего элемента */ {
+    margin-bottom: 0;
+}
+
+.sidebar-menu-item a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-menu-admin-header {
+    padding-bottom: 20px;
+}
+
+.sidebar-menu-admin {
+    padding: 0px 20px 20px 20px;
+}
+
+.sidebar-menu-admin span {
+    font-family: Helvetica;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.sidebar-profile {
+    display: flex;
+    justify-content: space-between;
+    background-color: #3c3c3c;
+    border-radius: 10px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 210px;
+    box-sizing: border-box;
+    height: 50px;
+}
+
+.sidebar-profile img {
+    width: 30px;
+    height: 30px;
+}
+
+.fio {
+    display: flex;
+    align-items: center;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.body {
+    display: flex;
+    background-color: #eeeeee;
+}
+
+.main-display {
+    position: relative;
+    left: 170px;
+    right: 170px;
+    overflow: auto;
+    padding: 0 20px;
+}
+
+.name-page {
+    position: relative;
+    padding: 38px 0 57px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.name-page img {
+    width: 34px;
+    height: 34px;
+}
+
+.name-page h1 {
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.blocks-stat {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    overflow: visible; /* Убеждаемся, что содержимое не обрезается */
+}
+
+.block-stat {
+    width: 300px;
+    height: 100px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    color: #000000;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.block-stat img {
+    width: 60px;
+    height: 60px;
+    padding-right: 20px;
+}
+
+.main-text {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.block-stat-text {
+    display: grid;
+    width: 180px;
+}
+
+.stat-of-day {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 700;
+    color: #003ec4;
+    display: grid;
+    align-items: end;
+    text-align: end;
+}
+
+.stat-of-day button {
+    height: 31px;
+    background-color: #1e4eb2;
+    border: 0px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Montserrat;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.stat-of-day button:hover {
+    background-color: #133172;
+}
+
+.recent-orders {
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.top-table {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-table span, .analytics-header span {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.top-table button {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 5px 5px 0 0;
+    border: none;
+    width: 138px;
+    height: 29px;
+    color: #ffffff;
+    background-color: #1e4eb2;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.top-table button:hover {
+    background-color: #133172;
+}
+
+.table {
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid #000000;
+    border-collapse: collapse;
+}
+
+thead th {
+    font-family: Montserrat;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+}
+
+tbody td {
+    font-family: Segoe UI;
+    font-size: 14px;
+    border: 1px solid transparent;
+    padding: 5px 10px;
+    vertical-align: middle;
+    height: 24px;
+}
+
+tbody tr:nth-child(even) { /*Выделение через строку*/
+    background-color: #f8f9fa;
+}
+
+tbody tr:hover {
+    background-color: #f1f3f5;
+}
+
+.status-label {
+    color: #ffffff;
+    text-align: center;
+    border-radius: 5px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.status-label.new {
+    background-color: #007BFF;
+}
+
+.status-label.clarification {
+    background-color: #20C997;
+}
+
+.status-label.waiting {
+    background-color: #a1208f;
+}
+
+.status-label.working {
+    background-color: #1e4eb2;
+}
+
+.status-label.ready {
+    background-color: #28a745;
+}
+
+.status-label.complete {
+    background-color: #00ce0e;
+}
+
+.status-label.cancel {
+    background-color: #f02237;
+}
+
+.details-link {
+    font-family: Montserrat;
+    font-weight: bold;
+    color:#1e4eb2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.details-link:hover {
+    color: #133172;
+}
+
+.block-details-link {
+    text-align: end;
+}
+
+.analytics {
+    width: 1290px;
+    height: 274px;
+    background-color: #ffffff;
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+}

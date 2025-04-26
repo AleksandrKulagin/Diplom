@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.png" type="images/png">
+    <title>PRO Сервис - сеть сервисных центров</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <!--Черная полоса-->
+        <div class="black-strip">
+            <div class="blocks-center"> 
+                <div class="menu-city">
+                    <!--Выбор города и филиала-->
+                    <img id="gps" src="images/GPS_стрелка.png" draggable="false">
+                    <button id="city">Город</button>
+                    <button id="address">Адрес</button>
+                    <button id="work">Режим работы</button>
+                    <img id="arrow_down" src="images/Стрелка вниз (белая).png" draggable="false">
+                </div>
+                <div class="menu-check">
+                    <!--Проверка статуса заказа-->
+                    <button class="btn-check">Проверка статуса заказа</button>
+                </div>
+            </div>
+        </div>
+        <!--Главное меню-->
+        <div class="main-menu">
+            <div class="logo blocks-center">
+                <img src="images/Лого_клиент_full 355x100px.png" draggable="false">
+                <nav class="site-menu">
+                    <ul>
+                        <li><a href="#yakor">Услуги</a></li>
+                        <li><a href="#">Маркет</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">О нас</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="main-block">
+        <!-- СЛАЙДЕР ЗАМЕНИТЬ!!! --> 
+        <div class="slider">
+            <img src="./images/Слайдер_заглушка.png" alt="">
+        </div>
+        <!--Описание сети сервисных центров-->
+        <div class="about">
+            <p class="about-head">
+                PRO Ремонт - это сеть сервисных центров по всей России
+            </p>
+            <p class="about-info-header">
+                Ремонтируем смартфоны, планшеты, ноутбуки быстро и с официальной гарантией
+            </p>
+        </div>
+        <!--Блок наши преимущества-->
+        <div class="privileges">
+            <p id="our-privileges">Наши преимущества</p>
+            <div class="privileges-blocks">
+                <div class="privileges-block">
+                    <img src="images/Диагностика.png" alt="" draggable="false">
+                    <div class="privileges-block-text">
+                        <div class="privileges-head">
+                            <span>Бесплатная диагностика</span>
+                        </div>
+                        <span class="privileges-description">Перед выполнением ремонта</span>
+                    </div>
+                </div>
+                <div class="privileges-block">
+                    <img src="images/Срочно.png" alt="" draggable="false">
+                    <div class="privileges-block-text">
+                        <div class="privileges-head">
+                            <span>Срочный ремонт</span>
+                        </div>
+                        <span class="privileges-description">Ремонт от 15 минут</span>
+                    </div>
+                </div>
+                <div class="privileges-block">
+                    <img src="images/Специалист.png" alt="" draggable="false">
+                    <div class="privileges-block-text">
+                        <div class="privileges-head">
+                            <span>Опытные специалисты</span>
+                        </div>
+                        <span class="privileges-description">С опытом работы более 10 лет</span>
+                    </div>
+                </div>
+                <div class="privileges-block">
+                    <img src="images/Чек.png" alt="" draggable="false">
+                    <div class="privileges-block-text">
+                        <div class="privileges-head">
+                            <span>Низкие цены</span>
+                        </div>
+                        <span class="privileges-description">Качество доступное каждому</span>
+                    </div>
+                </div>
+                <div class="privileges-block">
+                    <img src="images/Ремонт.png" alt="" draggable="false">
+                    <div class="privileges-block-text">
+                        <div class="privileges-head">
+                            <span>Оригинальные запчасти</span>
+                        </div>
+                        <span class="privileges-description">Комплектующие от производителя</span>
+                    </div>
+                </div>
+                <div class="privileges-block">
+                    <img src="images/Гарантия.png" alt="" draggable="false">
+                    <div class="privileges-block-text">
+                        <div class="privileges-head">
+                            <span>Предоставление гарантии</span>
+                        </div>
+                        <span class="privileges-description">Гарантия на услуги до 1 года</span>
+                    </div>
+                </div>
+            </div>
+        </div> <!--Конец блока Наши преимущества-->
+        <!--Услуги ремонта-->
+        <div class="uslugi">
+            <p class="text-uslugi" id="yakor">Наши сервисные центры предлагают своим клиентам<br>услуги ремонта <span class="difficulty">ЛЮБОЙ СЛОЖНОСТИ</span></p>
+            <div class="tiles-uslugi">
+                <div class="tile-usluga">
+                    <p class="phones">Ремонт<br>смартфонов</p>                      
+                    <img src="images/Смартфон.png" alt="" class="img-uslugi" draggable="false">
+                </div>
+                <div class="tile-usluga">
+                    <p class="phones">Ремонт<br>планшетов</p>
+                    <img src="images/Планшет.png" alt="" class="img-uslugi" draggable="false">
+                </div>
+                <div class="tile-usluga">
+                    <p class="phones">Ремонт<br>ноутбуков</p>
+                    <img src="images/Ноутбук.png" alt="" class="img-uslugi" draggable="false">
+                </div>
+                <div class="tile-usluga">
+                    <p class="phones">Продажа<br>запчастей</p>
+                    <img src="images/Запчасти.png" alt="" class="img-uslugi" draggable="false">
+                </div>
+                <div class="tile-usluga">
+                    <p class="phones">Продажа<br>аксессуаров</p>
+                    <img src="images/Аксессуары.png" alt="" class="img-uslugi" draggable="false">
+                </div>
+            </div>
+        </div>
+        <!--Процесс ремонта устройства-->
+        <div class="repair-process">
+            <p id="repair-header">Процесс ремонта устройства</p>
+            <div class="repair-process-points">
+                <!--Пункты-->
+                <div class="point"> 
+                    <div class="big-number-point">
+                        <div class="big-number-point-digit process">
+                            <p>1</p>
+                        </div>
+                        <div class="point-info">
+                            <div class="point-header">
+                                <p>Заявка</p>
+                            </div>
+                            <div class="point-description">
+                                <p>Вы оставляете заявку на сайте или приносите свое
+                                устройство в любой из<br>наших сервисных центров</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="point"> 
+                    <div class="big-number-point">
+                        <div class="big-number-point-digit process">
+                            <p>2</p>
+                        </div>
+                        <div class="point-info">
+                            <div class="point-header">
+                                <p>Диагностика</p>
+                            </div>
+                            <div class="point-description">
+                                <p>Мы проводим диагностику устройства для выявления дефектов</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="point"> 
+                    <div class="big-number-point">
+                        <div class="big-number-point-digit process">
+                            <p>3</p>
+                        </div>
+                        <div class="point-info">
+                            <div class="point-header">
+                                <p>Расчет стоимости</p>
+                            </div>
+                            <div class="point-description">
+                                <p>Рассчитываем стоимость ремонта в соответствии с ценой оказываемой услуги<br>и возможными акциями</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="point"> 
+                    <div class="big-number-point">
+                        <div class="big-number-point-digit process">
+                            <p>4</p>
+                        </div>
+                        <div class="point-info">
+                            <div class="point-header">
+                                <p>Ремонт</p>
+                            </div>
+                            <div class="point-description">
+                                <p>Выполняем работу быстро и качественно, используя только оригинальные детали</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Блок Расчет стоимости ремонта (Калькулятор)-->
+        <div class="calc-repair">
+            <p id="label-calc">Расчет стоимости ремонта устройства</p>
+            <div class="calc-fields">
+                <div class="type-device">
+                    <select class="select-type-your-device" name="choose-type-your-device" size="1">
+                        <option value="d1">Смартфон</option>
+                        <option value="d2">Планшет</option>
+                        <option value="d3">Ноутбук</option>
+                    </select>
+                </div>
+                <div class="brand-and-model-device">
+                    <input class="search-model-your-device" type="search" placeholder="Введите бренд и модель устройства">
+                </div>
+                <div class="service">
+                    <select class="select-choose-service" name="choose-service" size="1" aria-placeholder="sdsadsa">
+                        <option value="d1">Диагностика</option>
+                        <option value="d2">Замена дисплея</option>
+                        <option value="d3">Замена аккумулятора</option>
+                    </select>
+                </div>
+                <button class="btn-calc">Рассчитать</button>
+            </div>
+            <div class="btn-calc-result">
+                <img src="images/Devices/Phones/Apple/Apple iPhone 14 Pro Max.png" alt="" draggable="false">
+                <div class="result-info-header">
+                    <p class="device-header">Смартфон Apple iPhone 14 Pro Max<br>
+                        <span class="device-header-usluga">Услуга: </span><span class="device-header-usluga-text">Восстановление после попадания влаги</span><br>
+                        <span class="device-header-usluga-filial">Доступно в выбранном филиале<br>Выбранный филиал:</span>
+                        <span class="device-header-usluga-filial-adres">г. Омск, ул. Ленина, 1</span>
+                    </p>
+                </div>
+                <div class="result-info-usluga">
+                    <div class="usluga-price">
+                        <span>6 500Р</span>
+                    </div>
+                    <button class="device-order-available-button">
+                        <div class="inside-button">
+                            <span>Записаться</span>
+                        </div>
+                    </button>
+                    <div class="text-under-order-button">
+                        <p>Оплата производится<br>после оказания услуги</p>
+                    </div>
+                </div>
+            </div>
+            <!--Описание работы с калькулятором-->
+            <div class="calc-fields-process">
+                <div class="point"> 
+                    <div class="big-number-point-rem">
+                        <div class="big-number-point-digit">
+                            <p>1</p>
+                        </div>
+                        <div class="point-info">
+                            <div class="point-description">
+                                <p>Выберите тип устройства.<br>Это может быть телефон, планшет или ноутбук.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="point"> 
+                    <div class="big-number-point-rem">
+                        <div class="big-number-point-digit">
+                            <p>2</p>
+                        </div>
+                        <div class="point-info">
+                            <div class="point-description">
+                                <p>Найдите бренд и модель<br>в списке. Если вашего устройства нет в списке, к сожалению, мы не сможем его отремонтировать.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="point"> 
+                    <div class="big-number-point-rem">
+                        <div class="big-number-point-digit">
+                            <p>3</p>
+                        </div>
+                        <div class="point-info">
+                            <div class="point-description">
+                                <p>Выберите нужную услугу<br>из списка или пункт “Диагностика”, если нужна помощь. Наши мастера помогут вам определить неисправность.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="point"> 
+                    <div class="big-number-point-rem">
+                        <div class="big-number-point-digit">
+                            <p>4</p>
+                        </div>
+                        <div class="point-info">
+                            <div class="point-description">
+                                <p>Заполнив все поля, появится информация о наличии услуги и возможность<br>записи на услугу в выбранном филиале.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </div>
+        <!--Блок маркетинга-->
+        <div class="marketing">
+            <div class="market">
+                <p class="header-market-left">Умеете ремонтировать<br>самостоятельно?</p>
+                <p class="header-market-right">Нужны<br>аксессуары?</p>
+                <div class="market-img-text-button">
+                    <img src="images/Корзина маркет полная.png" alt="" draggable="false">
+                    <div class="market-text">
+                        <p>Загляните к нам в <span>Маркет</span><br>
+                        <br>Там вы найдете все комплектующие
+                        и аксессуары для ваших устройств</p>
+                        <div class="go-market">
+                            <button class="btn-go-market">
+                                <div class="btn-go-market-text-and-image">
+                                    <p>Перейти в маркет</p>
+                                    <img src="images/Двойная стрелка вправо.png" alt="" draggable="false">
+                                </div>
+                            </button>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <div class="work-and-sales">
+                <div class="work">
+                    <div class="work-text">
+                        <p class="work-title">
+                            Хочешь работать в нашей команде?
+                        </p>
+                        <p class="work-description">
+                            Заполни заявку и мы свяжемся с тобой
+                        </p>
+                    </div>
+                    <div class="work-image-and-button">
+                        <div class="work-image">
+                            <img src="images/Сотрудники_карьера.png" alt="" draggable="false">
+                        </div>
+                        <button class="btn-work">Подробнее</button>
+                    </div>
+                </div>
+                <div class="sales">
+                    <img src="images/Акция.png" alt="" draggable="false">
+                    <p class="sales-title">Акции и скидки</p>
+                    <button class="btn-sales">Посмотреть</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-logo-block">
+            <img src="images/Лого_клиент_футер_full 355x100px.png" alt="" draggable="false">
+        </div>
+        <div class="footer-menu-block">
+            <div class="footer-menu-block-left">
+                <ul>
+                    <li><a href="#">Маркет</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Акции и скидки</a></li>
+                    <li><a href="#">Вопросы и ответы</a></li>
+                </ul>
+            </div>
+            <div class="footer-menu-block-right">
+                <div class="footer-menu-block-right-up">
+                    <ul>
+                        <li><a href="#">Карьера</a></li>
+                        <li><a href="login-page.html">Для сотрудников</a></li>
+                    </ul>
+                </div>
+                <div class="footer-menu-block-right-down">
+                    <ul>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>    
+</body>
+</html>
