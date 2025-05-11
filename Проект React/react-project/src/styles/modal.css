@@ -1,0 +1,90 @@
+.modal h2 {
+  font-family: Montserrat;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.modal-content {
+  font-family: Montserrat;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.modal-actions button {
+  font-family: Montserrat;
+  font-weight: 700;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: hidden; /* Блокировка прокрутки */
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content {
+  margin-bottom: 20px;
+}
+
+.modal-field {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.modal-field label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.modal-field select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.modal-field select:focus {
+  outline: none;
+  border-color: #1e4eb2;
+  background-color: #fff;
+}
+
+.modal-actions button {
+  padding: 10px 20px;
+  background: #1e4eb2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.modal-actions button:hover {
+  background: #0056b3;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-left: 5px;
+}

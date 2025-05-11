@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.png" type="images/png">
+    <title>Портал сотрудника</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="body">
+    <div class="sidebar">
+        <div class="portal-logo">
+            <img src="images/Лого_сотрудник_full 207x70px.png" alt="">
+        </div>
+        <div class="sidebar-menu">
+            <div class="sidebar-menu-item">
+                <a href="#">
+                    <img src="images/Главная_белый (Dashboard).png" alt="">
+                    <p>Главная</p>
+                </a>
+            </div>
+            <div class="sidebar-menu-item">
+                <a href="#">
+                    <img src="images/Заказы_белый.png" alt="">
+                    <p>Заказы</p>
+                </a>
+            </div>
+            <div class="sidebar-menu-item">
+                <a href="#">
+                    <img src="images/Клиенты_белый.png" alt="">
+                    <p>Клиенты</p>
+                </a>
+            </div>
+            <div class="sidebar-menu-item">
+                <a href="#">
+                    <img src="images/Склад_белый.png" alt="">
+                    <p>Склад</p>
+                </a>
+            </div>
+            <div class="sidebar-menu-item">
+                <a href="#">
+                    <img src="images/Аналитика_белый.png" alt="">
+                    <p>Аналитика</p>
+                </a>
+            </div>
+            <div class="sidebar-menu-item">
+                <a href="#">
+                    <img src="images/Документация_белый.png" alt="">
+                    <p>Документация</p>
+                </a>
+            </div>
+        </div>
+        <div class="sidebar-menu-admin">
+            <div class="sidebar-menu-admin-header">
+                <span>Администрирование</span>
+            </div>
+            <div class="sidebar-menu-item">
+                <a href="#">
+                    <img src="images/Клиенты_белый.png" alt="">
+                    <p>Клиенты</p>
+                </a>
+            </div>
+            <div class="sidebar-menu-item">
+                <a href="#">
+                    <img src="images/Склад_белый.png" alt="">
+                    <p>Склад</p>
+                </a>
+            </div>
+            <div class="sidebar-menu-item">
+                <a href="#">
+                    <img src="images/Аналитика_белый.png" alt="">
+                    <p>Аналитика</p>
+                </a>
+            </div>
+            <div class="sidebar-menu-item">
+                <a href="#">
+                    <img src="images/Документация_белый.png" alt="">
+                    <p>Документация</p>
+                </a>
+            </div>
+        </div>
+        <div class="sidebar-profile">
+            <img src="images/Человек (белый).png" alt="">
+            <div class="fio">
+                Сотрудник
+            </div>
+            <img src="images/Профиль_меню.png" alt="">
+        </div>
+    </div>
+    <div class="main-display">
+        <div class="name-page">
+            <img src="images/Главная_черный (Dashboard).png" alt="" draggable="false">
+            <h1>Главная</h1>
+        </div> 
+        <div class="blocks-stat">
+            <div class="block-stat">
+                <img src="images/Список.png" alt="">
+                <div class="block-stat-text">
+                    <div class="main-text">
+                        Заказов за день
+                    </div>
+                    <div class="stat-of-day">
+                        123
+                    </div>
+                </div>
+            </div>
+            <div class="block-stat">
+                <img src="images/Выполнено.png" alt="">
+                <div class="block-stat-text">
+                    <div class="main-text">
+                        Выполнено
+                    </div>
+                    <div class="stat-of-day">
+                        123
+                    </div>
+                </div>
+            </div>
+            <div class="block-stat">
+                <img src="images/Доход.png" alt="">
+                <div class="block-stat-text">
+                    <div class="main-text">
+                        Доход за день
+                    </div>
+                    <div class="stat-of-day">
+                        123 456 789 ₽
+                    </div>
+                </div>
+            </div>
+            <div class="block-stat">
+                <img src="images/Человек (синий).png" alt="">
+                <div class="block-stat-text">
+                    <div class="main-text">
+                        Моя статистика
+                    </div>
+                    <div class="stat-of-day">
+                        <button>Подробнее</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="recent-orders">
+            <div class="header-and-table">
+                <div class="top-table">
+                    <span>Недавние заказы</span>
+                    <button>Все заказы</button>
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Номер заказа</th>
+                            <th>Тип заказа</th>
+                            <th>Статус заказа</th>
+                            <th>Обновлено</th>
+                            <th>Категория услуги</th>
+                            <th>Тип услуги</th>
+                            <th>Итого</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>№1234567890</td>
+                            <td>Ремонт</td>
+                            <td class="status-order"><div class="status-label new">Новый</div></td>
+                            <td>30.03.2025 12:00</td>
+                            <td>Ремонт смартфона</td>
+                            <td>Замена</td>
+                            <td><span class="table-order-price">99 999₽</span></td>
+                            <td class="block-details-link"><a href="#" class="details-link">Подробнее о заказе</a></td>
+                        </tr>
+                        <tr>
+                            <td>№9874561230</td>
+                            <td>Маркет</td>
+                            <td><div class="status-label working">В работе</div></td>
+                            <td>13.09.2025 14:27</td>
+                            <td>Ремонт ноутбука</td>
+                            <td>ПО</td>
+                            <td><span class="table-order-price">12 345₽</span></td>
+                            <td class="block-details-link"><a href="#" class="details-link">Подробнее о заказе</a></td>
+                        </tr>
+                        <tr>
+                            <td>№5555555555</td>
+                            <td>Ремонт</td>
+                            <td><div class="status-label cancel">Отменен</div></td>
+                            <td>22.02.2025 08:56</td>
+                            <td>Покупка запчастей</td>
+                            <td>Покупка</td>
+                            <td><span class="table-order-price">20 000₽</span></td>
+                            <td class="block-details-link"><a href="#" class="details-link">Подробнее о заказе</a></td>
+                        </tr>
+                        <tr>
+                            <td>№3333333333</td>
+                            <td>Маркет</td>
+                            <td><div class="status-label ready">Готов к выдаче</div></td>
+                            <td>07.07.2025 17:09</td>
+                            <td>Покупка аксессуаров</td>
+                            <td>Покупка</td>
+                            <td><span class="table-order-price">6 500₽</span></td>
+                            <td class="block-details-link"><a href="#" class="details-link">Подробнее о заказе</a></td>
+                        </tr>
+                        <tr>
+                            <td>№1247376490</td>
+                            <td>Ремонт</td>
+                            <td><div class="status-label clarification">Уточнение</div></td>
+                            <td>01.01.2025 11:45</td>
+                            <td>Ремонт планшета</td>
+                            <td>Восстановление</td>
+                            <td><span class="table-order-price">33 987₽</span></td>
+                            <td class="block-details-link"><a href="#" class="details-link">Подробнее о заказе</a></td>
+                        </tr>        
+                    </tbody>
+                </table>
+            </div>
+        </div> 
+        <div class="analytics">
+            <div class="analytics-header">
+                <span>Аналитика</span>
+            </div>
+        </div>          
+    </div>
+</body>
+</html>
