@@ -7,6 +7,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Файл index.html */
 .black-strip {
     width: 100%;
@@ -685,6 +689,11 @@
     margin-top: auto;
 }
 
+.name-page-clients {
+    font-family: Montserrat;
+    text-align: left;
+}
+
 /* Адаптивность главной страницы */
 /* Сделать для 1500рх, 1200рх, 768рх, 480рх */
 @media (max-width: 1500px)  {
@@ -911,7 +920,6 @@
 }
 
 /* Файл portal.html */
-
 .sidebar {
     width: 250px;
     height: 919px;
@@ -1181,6 +1189,8 @@ tbody tr:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Montserrat;
+    font-weight: 600;
 }
 
 .status-label.new {
