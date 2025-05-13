@@ -1,0 +1,342 @@
+/* Файл portal.html */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #1b1b1b;
+    color: #ffffff;
+}
+
+.portal-logo {
+    padding: 20px;
+}
+
+.portal-logo img {
+    width: 100%;
+}
+
+.sidebar-menu {
+    padding: 30px 20px;
+}
+
+.sidebar-menu img, .sidebar-menu-admin img{
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+
+.sidebar-menu-item-select {
+    width: 210px;
+    height: 50px;
+    box-sizing: border-box;
+    background-color: #3c3c3c;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-menu-item-select a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sidebar-menu-item-select:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar-menu-item-select:hover, .sidebar-profile:hover {
+    background-color: #5c5c5c;
+    cursor: pointer;
+}
+
+.sidebar-menu-item.active {
+    background-color: #5c5c5c;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.sidebar-menu-item {
+    display: flex;
+    align-items: center;
+}
+
+/*  */
+
+.sidebar-menu-admin-header {
+    padding-bottom: 20px;
+}
+
+.sidebar-menu-admin {
+    padding: 0px 20px 20px 20px;
+}
+
+.sidebar-menu-admin span {
+    font-family: Helvetica;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.sidebar-profile {
+    display: flex;
+    justify-content: space-between;
+    background-color: #3c3c3c;
+    border-radius: 10px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 210px;
+    box-sizing: border-box;
+    height: 50px;
+}
+
+.sidebar-profile img {
+    width: 30px;
+    height: 30px;
+}
+
+.fio {
+    display: flex;
+    align-items: center;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.body {
+    display: flex;
+    background-color: #eeeeee;
+}
+
+.main-display {
+    position: relative;
+    left: 170px;
+    right: 170px;
+    overflow: auto;
+    padding: 0 20px;
+}
+
+.name-page {
+    position: relative;
+    padding: 38px 0 57px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.name-page img {
+    width: 34px;
+    height: 34px;
+}
+
+.name-page h1 {
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.blocks-stat {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    overflow: visible; /* Убеждаемся, что содержимое не обрезается */
+}
+
+.block-stat {
+    width: 300px;
+    height: 100px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    color: #000000;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.block-stat img {
+    width: 60px;
+    height: 60px;
+    padding-right: 20px;
+}
+
+.main-text {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.block-stat-text {
+    display: grid;
+    width: 180px;
+}
+
+.stat-of-day {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 700;
+    color: #003ec4;
+    display: grid;
+    align-items: end;
+    text-align: end;
+}
+
+.stat-of-day button {
+    height: 31px;
+    width: 100%;
+    background-color: #1e4eb2;
+    border: 0px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Montserrat;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.stat-of-day button:hover {
+    background-color: #133172;
+}
+
+.recent-orders {
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.top-table {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-table span, .analytics-header span {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.top-table button {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 5px 5px 0 0;
+    border: none;
+    width: 180px;
+    height: 29px;
+    color: #ffffff;
+    background-color: #1e4eb2;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.top-table button:hover {
+    background-color: #133172;
+}
+
+.table {
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid #000000;
+    border-collapse: collapse;
+}
+
+thead th {
+    font-family: Montserrat;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+}
+
+tbody td {
+    font-family: Segoe UI;
+    font-size: 14px;
+    border: 1px solid transparent;
+    padding: 5px 10px;
+    vertical-align: middle;
+    height: 24px;
+}
+
+tbody tr:nth-child(even) { /*Выделение через строку*/
+    background-color: #f8f9fa;
+}
+
+tbody tr:hover {
+    background-color: #f1f3f5;
+}
+
+.status-label {
+    color: #ffffff;
+    text-align: center;
+    border-radius: 5px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat;
+    font-weight: 600;
+}
+
+.status-label.new {
+    background-color: #007BFF;
+}
+
+.status-label.clarification {
+    background-color: #20C997;
+}
+
+.status-label.waiting {
+    background-color: #a1208f;
+}
+
+.status-label.working {
+    background-color: #1e4eb2;
+}
+
+.status-label.ready {
+    background-color: #28a745;
+}
+
+.status-label.complete {
+    background-color: #00ce0e;
+}
+
+.status-label.cancel {
+    background-color: #f02237;
+}
+
+.details-link {
+    font-family: Montserrat;
+    font-weight: bold;
+    color:#1e4eb2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.details-link:hover {
+    color: #133172;
+}
+
+.block-details-link {
+    text-align: end;
+}
+
+.block-analytics {
+    width: 1290px;
+    height: 274px;
+    background-color: #ffffff;
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+}

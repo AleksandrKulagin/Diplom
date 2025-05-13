@@ -4,6 +4,12 @@ import App from './App.tsx'
 
 import './styles/modal.css'
 import './styles/styles.css'
+import './styles/page404.css'
+import './styles/main.css'
+import './styles/login.css'
+import './styles/portal.css'
+import './styles/footer.css'
+import './styles/index.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

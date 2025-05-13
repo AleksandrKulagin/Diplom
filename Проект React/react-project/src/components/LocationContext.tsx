@@ -1,39 +1,38 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
 interface LocationContextType {
   selectedCity: string;
   selectedFilial: string;
   setSelectedCity: (city: string) => void;
   setSelectedFilial: (filial: string) => void;
-  resetCity: () => void;
-  resetFilial: () => void;
+  isLocationSelected: () => boolean;
 }
 
 const LocationContext = createContext<LocationContextType | undefined>(undefined);
 
 export function LocationProvider({ children }: { children: React.ReactNode }) {
-  const [selectedCity, setSelectedCity] = useState(() => {
-    return localStorage.getItem('selectedCity') || '';
-  });
-  const [selectedFilial, setSelectedFilial] = useState(() => {
-    return localStorage.getItem('selectedFilial') || '';
+  const [selectedCity, setSelectedCityState] = useState(() => {
+    const savedCity = localStorage.getItem('selectedCity');
+    return savedCity || '';
   });
 
-  useEffect(() => {
-    localStorage.setItem('selectedCity', selectedCity);
-  }, [selectedCity]);
+  const [selectedFilial, setSelectedFilialState] = useState(() => {
+    const savedFilial = localStorage.getItem('selectedFilial');
+    return savedFilial || '';
+  });
 
-  useEffect(() => {
-    localStorage.setItem('selectedFilial', selectedFilial);
-  }, [selectedFilial]);
-
-  const resetCity = () => {
-    setSelectedCity('');
-    setSelectedFilial('');
+  const setSelectedCity = (city: string) => {
+    setSelectedCityState(city);
+    localStorage.setItem('selectedCity', city);
   };
 
-  const resetFilial = () => {
-    setSelectedFilial('');
+  const setSelectedFilial = (filial: string) => {
+    setSelectedFilialState(filial);
+    localStorage.setItem('selectedFilial', filial);
+  };
+
+  const isLocationSelected = () => {
+    return Boolean(selectedCity && selectedFilial);
   };
 
   return (
@@ -43,8 +42,7 @@ export function LocationProvider({ children }: { children: React.ReactNode }) {
         selectedFilial,
         setSelectedCity,
         setSelectedFilial,
-        resetCity,
-        resetFilial,
+        isLocationSelected,
       }}
     >
       {children}

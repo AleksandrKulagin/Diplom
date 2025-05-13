@@ -1,0 +1,30 @@
+[
+    {
+        "type": "phone",
+        "model": "iPhone 13 Pro Max"
+    },
+    {
+        "type": "phone",
+        "model": "iPhone 14 Pro Max"
+    },
+    {
+        "type": "phone",
+        "model": "iPhone 15 Pro Max"
+    },
+    {
+        "type": "phone",
+        "model": "Samsung Galaxy S22"
+    },
+    {
+        "type": "phone",
+        "model": "Samsung Galaxy S23"
+    },
+    {
+        "type": "phone",
+        "model": "Samsung Galaxy S24"
+    },
+    {
+        "type": "phone",
+        "model": "Samsung Galaxy S25"
+    }
+]

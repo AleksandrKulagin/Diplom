@@ -1,21 +1,10 @@
-.modal h2 {
-  font-family: Montserrat;
-  font-size: 20px;
-  margin-bottom: 20px;
+.formCityFilial {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.modal-content {
-  font-family: Montserrat;
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.modal-actions button {
-  font-family: Montserrat;
-  font-weight: 700;
-}
-
-.modal-overlay {
+.modal-overlay-filial {
   position: fixed;
   top: 0;
   left: 0;
@@ -26,41 +15,59 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  overflow: hidden; /* Блокировка прокрутки */
+  overflow: hidden;
 }
 
-.modal {
-  background: white;
+.modal-content-filial {
+  font-family: Montserrat;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-filial {
+  background: #ffffff;
   padding: 20px;
-  border-radius: 8px;
-  width: 400px;
+  border-radius: 10px;
+  width: 500px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
-.modal-content {
-  margin-bottom: 20px;
+.modal-filial h2, .modal-content-order h2 {
+  font-family: Montserrat;
+  margin-bottom: 10px;
 }
 
 .modal-field {
-  margin-bottom: 15px;
   text-align: left;
 }
 
 .modal-field label {
-  display: block;
-  margin-bottom: 5px;
   font-weight: bold;
 }
 
 .modal-field select {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
-  background-color: #f9f9f9;
   cursor: pointer;
+  border-radius: 10px;
+  height: 44px;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: Inter;
+  font-weight: 300;
+  font-size: 16px;
+  font-style: normal;
+  padding: 10px;
+}
+
+.modal-field select:disabled {
+  background-color: #f5f5f5;
+  color: #999;
+  cursor: not-allowed;
+  border-color: #ddd;
 }
 
 .modal-field select:focus {
@@ -69,22 +76,126 @@
   background-color: #fff;
 }
 
-.modal-actions button {
+.modal-actions button, .submit-button {
   padding: 10px 20px;
   background: #1e4eb2;
-  color: white;
+  color: #ffffff;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 16px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  font-family: Montserrat;
+  font-weight: 700;
+  width: 100%;
 }
 
-.modal-actions button:hover {
-  background: #0056b3;
+.modal-actions button:hover, .submit-button:hover  {
+  background: #133172;
 }
 
-.error-message {
+.modal-error-message, .modal-error-message-check {
   color: red;
-  font-size: 12px;
-  margin-left: 5px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  font-family: Montserrat;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.modal-error-message-check {
+  padding-bottom: 10px;
+}
+
+/* Проверка статуса заказа */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content-order {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  font-family: Montserrat;
+  box-sizing: border-box;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+.modal-close:hover {
+  color: #000;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  height: 44px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: Inter;
+  font-weight: 300;
+  font-size: 16px;
+  font-style: normal;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.order-status {
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.order-status h3 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.order-status p {
+  margin: 0;
+  color: #666;
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }

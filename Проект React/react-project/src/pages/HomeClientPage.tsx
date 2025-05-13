@@ -1,36 +1,66 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ResultCalculate from "../components/ResultCalculate";
-import ChooseCityFilial from "../components/ChooseCityFilial";
+import { Helmet } from "react-helmet-async";
 
 function HomeClientPage() {
   const [showCalcResult, setShowCalcResult] = useState(false);
   const [deviceType, setDeviceType] = useState("");
   const [deviceModel, setDeviceModel] = useState("");
   const [serviceType, setServiceType] = useState("");
-  const [showModal, setShowModal] = useState(true);
+  const [error, setError] = useState("");
+  const [deviceTypeError, setDeviceTypeError] = useState(false);
+  const [deviceModelError, setDeviceModelError] = useState(false);
+  const [serviceTypeError, setServiceTypeError] = useState(false);
+
+  useEffect(() => {
+    fetch("/api/devices.json")
+      .then((response) => response.json())
+      .catch((error) => console.error("Ошибка загрузки данных:", error));
+  }, []);
 
   const handleCalcClick = () => {
-    if (deviceType && deviceModel && serviceType) {
-      setShowCalcResult(true);
+    let hasError = false;
+    if (!deviceType) {
+      setDeviceTypeError(true);
+      hasError = true;
     } else {
-      alert("Пожалуйста, заполните все поля!");
+      setDeviceTypeError(false);
     }
+    if (!deviceModel) {
+      setDeviceModelError(true);
+      hasError = true;
+    } else {
+      setDeviceModelError(false);
+    }
+    if (!serviceType) {
+      setServiceTypeError(true);
+      hasError = true;
+    } else {
+      setServiceTypeError(false);
+    }
+
+    if (hasError) {
+      setError("Пожалуйста, заполните все поля!");
+      return;
+    }
+
+    setError("");
+    setShowCalcResult(true);
   };
 
   const handleFieldChange = () => {
-    setShowCalcResult(false); // Скрыть результат при изменении любого поля
+    setShowCalcResult(false);
+    setError("");
+    setDeviceTypeError(false);
+    setDeviceModelError(false);
+    setServiceTypeError(false);
   };
 
-  const handleModalClose = (filial: string) => {
-    setSelectedFilial(filial);
-    setShowModal(false);
-  };
-  
   return (
     <>
-      {showModal && <ChooseCityFilial onClose={handleModalClose} />}
+      <Helmet title="PRO Ремонт - сеть сервисных центров" />
       <Header />
       <main className="main-block">
         <div className="slider">
@@ -292,7 +322,9 @@ function HomeClientPage() {
           <div className="calc-fields">
             <div className="type-device">
               <select
-                className="select-type-your-device"
+                className={`select-type-your-device ${
+                  deviceTypeError ? "error" : ""
+                }`}
                 name="choose-type-your-device"
                 value={deviceType}
                 onChange={(e) => {
@@ -308,7 +340,9 @@ function HomeClientPage() {
             </div>
             <div className="brand-and-model-device">
               <input
-                className="search-model-your-device"
+                className={`search-model-your-device ${
+                  deviceModelError ? "error" : ""
+                }`}
                 type="search"
                 placeholder="Введите бренд и модель устройства"
                 value={deviceModel}
@@ -320,7 +354,9 @@ function HomeClientPage() {
             </div>
             <div className="service">
               <select
-                className="select-choose-service"
+                className={`select-choose-service ${
+                  serviceTypeError ? "error" : ""
+                }`}
                 name="choose-service"
                 value={serviceType}
                 onChange={(e) => {
@@ -338,6 +374,7 @@ function HomeClientPage() {
               Рассчитать
             </button>
           </div>
+          {error && <div className="error-message">{error}</div>}
           {showCalcResult && (
             <div className="btn-calc-result">
               <ResultCalculate
@@ -392,7 +429,7 @@ function HomeClientPage() {
                   <p>
                     Выберите нужную услугу
                     <br />
-                    из списка или пункт “Диагностика”, если нужна помощь.
+                    из списка или пункт "Диагностика", если нужна помощь.
                     Наши мастера помогут вам определить неисправность.
                   </p>
                 </div>
@@ -489,10 +526,6 @@ function HomeClientPage() {
       <Footer />
     </>
   );
-}
-
-function setSelectedFilial(filial: string) {
-  console.log(`Selected filial: ${filial}`);
 }
 
 export default HomeClientPage;

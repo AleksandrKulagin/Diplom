@@ -1,0 +1,199 @@
+/* Файл login-page.html */
+.login-page {
+    height: 100vh;
+    display: flex;
+    background-image: url('/assets/images/background_login.jpg');    
+}
+
+.back-to-client {
+    background-color: white;
+    width: 390px;
+    height: 80px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 0px;
+}
+
+.back-to-client:hover {
+    cursor: pointer;
+}
+
+.back-to-client img {
+    width: 40px;
+    height: 40px;
+}
+
+.back-to-client span {
+    font-family: Montserrat;
+    font-size: 28px;
+    font-weight: 700;
+    margin-left: 10px;
+    color: #1e4eb2;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-client span:hover {
+    padding: 0px;
+    color: #133172;
+}
+
+.no-link-decoration {
+    text-decoration: none;
+}
+
+.info-form h1, .form-auth h1 {
+    font-family: Montserrat;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.login-page-forms {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+.info-form {
+    width: 390px;
+    background-color: #ffffff;
+    color: #000000;
+    display: grid;
+    padding: 20px;
+    border-radius: 10px;
+    border: 0px;
+    box-sizing: border-box;
+}
+
+.info-form img {
+    width: 207px;
+    height: 70px;
+}
+
+.header-form-text {
+    padding-bottom: 10px;
+}
+
+.header-form-text, .header-form-image, .form-auth-header {
+    justify-content: center;
+    display: flex;
+}
+
+.form-auth {
+    padding: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 700;
+    display: grid;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.form-auth-header {
+    width: 350px;
+    padding-bottom: 10px;
+}
+
+.form-auth-inputs {
+    padding: 0px 27px;
+}
+
+.login-input, .password-input {
+    gap: 5px;
+    display: grid;
+}
+
+.login-input input, .password-input input {
+    border-radius: 5px;
+    height: 30px;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Inter;
+    font-weight: 300;
+    font-size: 16px;
+    font-style: normal;
+    padding: 5px 10px;
+}
+
+.password-input .label-input {
+    margin-top: 10px;
+}
+
+.form-auth p {
+    font-family: Montserrat;
+    font-weight: 700;
+}
+
+.remember-check {
+    display: flex;
+    padding: 10px 0px;
+}
+
+.remember-check p {
+    padding-left: 10px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.btn-login {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-login button {
+    width: 168px;
+    height: 44px;
+    background-color: #1e4eb2;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login button:hover {
+    cursor: pointer;
+    background-color:#133172;
+}
+
+.repair-pass {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.repair-pass p {
+    font-size: 16px;
+}
+
+.repair-pass a {
+    color: #1e4eb2;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.repair-pass a:hover {
+    color: #133172;
+}
+
+.error-input {
+    border: 1px solid #ff0000 !important;
+}
+
+.error-message {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 5px;
+    font-family: Montserrat;
+    font-weight: 400;
+}
