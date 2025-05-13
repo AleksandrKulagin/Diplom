@@ -21,7 +21,7 @@ function PortalMainPage() {
                                     <span>Заказов за день</span>
                                 </div>
                                 <div className="stat-of-day">
-                                    <span>123</span>
+                                    <span>23</span>
                                 </div>
                             </div>
                         </div>
@@ -32,7 +32,7 @@ function PortalMainPage() {
                                     Выполнено
                                 </div>
                                 <div className="stat-of-day">
-                                    123
+                                    19
                                 </div>
                             </div>
                         </div>
@@ -43,7 +43,7 @@ function PortalMainPage() {
                                     Доход за день
                                 </div>
                                 <div className="stat-of-day">
-                                    123 456 789 ₽
+                                    32 200 ₽
                                 </div>
                             </div>
                         </div>
@@ -137,11 +137,11 @@ function PortalMainPage() {
                             </table>
                         </div>
                     </div>
-                    <div className="block-analytics">
+                    {/* <div className="block-analytics">
                         <div className="analytics-header">
                             <span>Аналитика</span>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </>

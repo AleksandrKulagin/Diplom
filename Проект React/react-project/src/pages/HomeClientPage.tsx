@@ -13,6 +13,9 @@ function HomeClientPage() {
   const [deviceTypeError, setDeviceTypeError] = useState(false);
   const [deviceModelError, setDeviceModelError] = useState(false);
   const [serviceTypeError, setServiceTypeError] = useState(false);
+  const [showForm, setShowForm] = useState(false);
+  const [orderSuccess, setOrderSuccess] = useState(false);
+  const [orderNumber, setOrderNumber] = useState("");
 
   useEffect(() => {
     fetch("/api/devices.json")
@@ -20,42 +23,16 @@ function HomeClientPage() {
       .catch((error) => console.error("Ошибка загрузки данных:", error));
   }, []);
 
-  const handleCalcClick = () => {
-    let hasError = false;
-    if (!deviceType) {
-      setDeviceTypeError(true);
-      hasError = true;
-    } else {
-      setDeviceTypeError(false);
-    }
-    if (!deviceModel) {
-      setDeviceModelError(true);
-      hasError = true;
-    } else {
-      setDeviceModelError(false);
-    }
-    if (!serviceType) {
-      setServiceTypeError(true);
-      hasError = true;
-    } else {
-      setServiceTypeError(false);
-    }
-
-    if (hasError) {
-      setError("Пожалуйста, заполните все поля!");
-      return;
-    }
-
-    setError("");
-    setShowCalcResult(true);
-  };
-
   const handleFieldChange = () => {
     setShowCalcResult(false);
     setError("");
     setDeviceTypeError(false);
     setDeviceModelError(false);
     setServiceTypeError(false);
+  };
+
+  const generateOrderNumber = () => {
+    return Math.floor(1000000000 + Math.random() * 9000000000).toString();
   };
 
   return (
@@ -370,7 +347,11 @@ function HomeClientPage() {
                 <option value="Замена аккумулятора">Замена аккумулятора</option>
               </select>
             </div>
-            <button className="btn-calc" onClick={handleCalcClick}>
+            <button
+              className="btn-calc"
+              type="button"
+              onClick={() => setShowCalcResult(true)}
+            >
               Рассчитать
             </button>
           </div>
@@ -381,6 +362,7 @@ function HomeClientPage() {
                 deviceType={deviceType}
                 deviceModel={deviceModel}
                 serviceType={serviceType}
+                onOrderClick={() => setShowForm(true)}
               />
             </div>
           )}
@@ -524,6 +506,58 @@ function HomeClientPage() {
         </div>
       </main>
       <Footer />
+
+      {showForm && (
+        <div className="modal-bg">
+          <div className="modal-window">
+            {!orderSuccess ? (
+              <form
+                onSubmit={e => {
+                  e.preventDefault();
+                  const num = generateOrderNumber();
+                  setOrderNumber(num);
+                  setOrderSuccess(true);
+                }}
+              >
+                <h2 style={{ marginBottom: "1rem" }}>Форма заявки</h2>
+                <div style={{ marginBottom: "1rem" }}>
+                  <label>
+                    Имя:<br />
+                    <input type="text" name="name" required className="form-input" />
+                  </label>
+                </div>
+                <div style={{ marginBottom: "1rem" }}>
+                  <label>
+                    Фамилия:<br />
+                    <input type="text" name="surname" required className="form-input" />
+                  </label>
+                </div>
+                <div style={{ marginBottom: "1rem" }}>
+                  <label>
+                    Телефон:<br />
+                    <input type="tel" name="phone" required className="form-input" />
+                  </label>
+                </div>
+                <div style={{ display: "flex", gap: "1rem", justifyContent: "flex-end" }}>
+                  <button type="submit" className="submit-button">Отправить</button>
+                  <button type="button" className="submit-button" style={{ background: "#888" }} onClick={() => setShowForm(false)}>
+                    Закрыть
+                  </button>
+                </div>
+              </form>
+            ) : (
+              <div style={{ textAlign: "center" }}>
+                <h2>Заказ успешно оформлен!</h2>
+                <p>Ваш номер заказа:</p>
+                <div style={{ fontSize: "2rem", fontWeight: "bold", margin: "1rem 0" }}>{orderNumber}</div>
+                <button className="submit-button" onClick={() => { setShowForm(false); setOrderSuccess(false); }}>
+                  Закрыть
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </>
   );
 }

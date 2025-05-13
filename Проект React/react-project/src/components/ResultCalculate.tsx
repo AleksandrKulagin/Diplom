@@ -6,9 +6,10 @@ interface ResultCalculateProps {
   deviceType: string;
   deviceModel: string;
   serviceType: string;
+  onOrderClick: () => void;
 }
 
-function ResultCalculate({ deviceType, deviceModel, serviceType }: ResultCalculateProps) {
+function ResultCalculate({ deviceType, deviceModel, serviceType, onOrderClick }: ResultCalculateProps) {
   const { selectedCity, selectedFilial } = useLocation();
 
   // Modal state
@@ -21,18 +22,6 @@ function ResultCalculate({ deviceType, deviceModel, serviceType }: ResultCalcula
   const [orderNumber, setOrderNumber] = useState("");
   const [formError, setFormError] = useState("");
   const [codeError, setCodeError] = useState("");
-
-  const handleOpen = () => {
-    setIsOpen(true);
-    setStep(1);
-    setName("");
-    setSurname("");
-    setPhone("");
-    setCode("");
-    setOrderNumber("");
-    setFormError("");
-    setCodeError("");
-  };
 
   const handleFormSubmit = () => {
     if (!name || !surname || !phone) {
@@ -83,7 +72,7 @@ function ResultCalculate({ deviceType, deviceModel, serviceType }: ResultCalcula
         <div className="usluga-price">
           <span>6 500Р</span>
         </div>
-        <button className="device-order-available-button" onClick={handleOpen}>
+        <button className="device-order-available-button" onClick={onOrderClick}>
           <div className="inside-button">
             <span>Записаться</span>
           </div>
