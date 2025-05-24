@@ -14,7 +14,6 @@ import PortalAnalytics from "./pages/PortalAnalytics";
 import PortalDocuments from "./pages/PortalDocuments";
 import Profile from "./pages/Profile";
 import Error404 from "./pages/Error404";
-import Qqqq from "./pages/Qqqq";
 
 function AppRoutes() {
   return (
@@ -35,7 +34,6 @@ function AppRoutes() {
           <Route path="/portal/profile" element={<Profile />} />
           <Route path="/portal" element={<Navigate to="/portal/main" replace />} />
           <Route path="*" element={<Error404 />} />
-          <Route path="/q" element={<Qqqq />} />
         </Routes>
       </HelmetProvider>
     </LocationProvider>

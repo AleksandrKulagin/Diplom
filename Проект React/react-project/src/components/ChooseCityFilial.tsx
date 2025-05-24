@@ -29,13 +29,13 @@ function ChooseCityFilial({ onClose, initialCity = '', initialFilial = '' }: Cho
 
   const handleCityChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedCityState(e.target.value);
-    setCityError(false); // Сбросить ошибку при изменении города
-    setSelectedFilialState(""); // Сбросить выбранный филиал при смене города
+    setCityError(false); // Ошибка при изменении города
+    setSelectedFilialState(""); // Сброс выбранного филиала при смене города
   };
 
   const handleFilialChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedFilialState(e.target.value);
-    setFilialError(false); // Сбросить ошибку при изменении филиала
+    setFilialError(false); // Ошибка при изменении филиала
   };
 
   const handleConfirm = () => {
