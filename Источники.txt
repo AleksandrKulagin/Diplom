@@ -1,8 +1,22 @@
 1. https://www.idc.com/promo/smartphone-market-share/
-2. https://4pda.to/2023/02/17/409962/v_rf_sokratilos_chislo_servisnykh_tsentrov_no_spros_na_remont_rastyot_v_chyom_prichiny//4pda.to/2023/02/17/409932 /v_rossii_sokratilos_chislo_servisnykh_tsentrov_po_remontu_elektroniki/
+2. https://4pda.to/2023/02/17/409962/v_rf_sokratilos_chislo_servisnykh_tsentrov_no_spros_na_remont_rastyot_v_chyom_prichiny
 3. https://www.statista.com/statistics/263437/global-smartphone-sales-to-end-users-since-2007/
-4. https://www.bitrix24.ru/
+4. https://www.bitrix24.ru/features/crm/
 5. https://remboard.ru/
-6. https://odoo.ru/
+6. https://www.odoo.com/ru_RU
 7. https://www.amocrm.ru
 8. https://livesklad.com/
+9. https://skillbox.ru/media/management/chto-takoe-crmsistemy-kak-oni-pomogayut-prodavat-i-chto-o-nikh-obyazatelno-nuzhno-znat/
+10. https://blog.skillfactory.ru/funktsionalnye-i-nefunktsionalnye-trebovaniya-k-po/
+11. https://skillbox.ru/media/code/frontend_i_backend/
+12. https://ru.hexlet.io/courses/internet-fundamentals/lessons/site/theory_unit
+13. https://practicum.yandex.ru/blog/chto-takoe-user-story-i-kak-napisat/
+14. https://habr.com/ru/companies/abdigital/articles/674904/
+15. https://pro-dgtl.ru/blog/razrabotka/tpost/e8ebs30l71-arhitektura-programmnogo-obespecheniya-p
+16. https://ru.hexlet.io/courses/internet-fundamentals/lessons/client-server/theory_unit
+17. https://habr.com/ru/companies/itq_group/articles/705598/
+18. https://habr.com/ru/articles/836464/
+19. https://sky.pro/wiki/sql/trehurovnevaya-klient-servernaya-arhitektura/
+20. https://education.yandex.ru/journal/model-view-controller
+21. https://habr.com/ru/articles/254773/
+22. https://sky.pro/wiki/sql/normalizaciya-dannyh-chto-eto-i-zachem-ona-nuzhna/
